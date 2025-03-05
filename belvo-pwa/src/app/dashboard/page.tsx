@@ -216,12 +216,12 @@ export default function DashboardPage() {
             ) : (
               <>
                 <KPIWidget
-                  incomes={balanceData?.incomes}
-                  expenses={balanceData?.expenses}
-                  balance={balanceData?.balance}
+                  incomes={balanceData?.incomes ?? 0}
+                  expenses={balanceData?.expenses ?? 0}
+                  balance={balanceData?.balance ?? 0}
                 />
 
-                {balanceData?.transactions?.length > 0 ? (
+                {balanceData && balanceData.transactions && balanceData.transactions.length > 0 ? (
                   <TransactionsTable transactions={balanceData.transactions} />
                 ) : (
                   <p>No se encontraron transacciones</p>
