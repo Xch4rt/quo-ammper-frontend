@@ -7,6 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Belvo PWA",
   description: "Mi PWA con Belvo y Next.js 13",
+  manifest: "/manifest.json",
+  themeColor: "#0AB0D8",
 };
 
 export default function RootLayout({
